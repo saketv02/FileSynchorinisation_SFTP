@@ -76,7 +76,6 @@ class RemoteControl:
   # canonical path on the remote filesystem.
   def get_remote_path(self, local_path):
     # Strip the local base path from the local full canonical path to get the relative path
-    # TODO: This will not work properly on Windows since slash directions will conflict
     remote_relative = local_path[self._local_base_length:]
     return (self._remote_base + remote_relative)
 
